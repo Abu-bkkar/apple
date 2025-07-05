@@ -1,0 +1,134 @@
+// const arr =[];
+// const arrToObj ={}
+// for(let i = 0; i < 5000000; i++){
+
+//     const o ={
+//         id: i,
+//         value: i,
+
+//     }
+//     arr.push(o);
+//     arrToObj[i]=o
+
+// }
+
+// console.time('find');
+
+// let id = 4999999;
+// const obj = arr.find((item )=> item.id ==id);
+// obj.value = 555;
+
+// console.timeEnd('find');
+
+// console.time('obj');
+
+
+// arrToObj[id].value = 555;
+
+// console.timeEnd('obj')
+
+
+//! *time commple ct*//
+
+
+// const arr =[];
+// const arrToObj ={}
+// for(let i = 0; i < 5000000; i++){
+
+//     const o ={
+//         id: i,
+//         value: i,
+
+//     }
+//     arr.push(o);
+//     arrToObj[i]=o
+
+// }
+
+// console.time('array');
+
+// const index = arr.findIndex ((item) => item.id == 400000);
+// arr.splice(index,1);
+
+// console.timeEnd('array');
+
+// console.time('obj');
+
+// arrToObj[400000];
+
+// console.timeEnd('obj');
+
+
+//! map, filter, reduce
+
+
+// const numbers =[1 ,2 ,3, 4,'false' ,'', 'NaN',5,6,];
+
+// const strs = numbers.filter((v) => v).map ((v)=> v.toString());
+
+// console.log(strs);
+
+
+
+
+// const numbers =[1 ,2 ,3, 4,'false' ,'', 'NaN',5,6,];
+
+
+/**map --> same length as the original array]
+ * filter --> [wigh filtered item ]
+ * reduce --> knew one knows (Onl you know ) all possible value
+ */
+
+// const result = numbers.reduce((acc, cur)=> {
+
+//    if (cur) {
+//      acc += cur.toString()+"," ;
+//    }
+//     return acc;
+// },"")
+
+// console.log(result)
+
+
+// const result = numbers.reduce((acc, cur)=> {
+
+ 
+//     return acc;
+// },[])
+
+// console.log(result)\
+
+// const numbers =[1 ,2 ,3, 4,'false' ,'', 'NaN',5,6];
+
+// const result = numbers.reduce((acc,cur) =>{
+//     if (cur){
+//         acc.push((cur.toString));
+
+//     }
+//     return acc;
+// })
+// console.log(result)
+
+
+// function hello(fullName,age, deteOfBirth = 2000 ,) {
+//     console.log('Hi ' + fullName + ' I am ' + age +' My Date of Bith '+ deteOfBirth,);
+// };
+// hello("Apple", 30,1995);
+// hello("Apple", 25,1998);
+
+// const isSubscribed = function(){
+//     console.log('Subcribed');
+// }
+// document.getElementById('btn').addEventListener('click',isSubscribed);
+// const numan= function(a,b){
+// return a*b;
+// }
+// console.log(numan(10,42));
+
+
+const numbers =[4,5,6,7,8];
+const sqNumbers = numbers.map(function(number){
+    return number * number;
+});
+
+console.log (sqNumbers)
