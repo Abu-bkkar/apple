@@ -1,0 +1,69 @@
+const newSymb = Symbol('Key1')
+
+const mobileModel={
+    //key:value
+
+    brand: 'Samsung',
+    model:'s24 Ultra',
+    processor: 'sanpdeagon Gen 3',
+    camera:['200mp', '12mp', '20mp'],
+    hasZoomCamera: true,
+    'selfie camera MP': 12,
+    [newSymb]:'MyKey1',
+
+  brandModel: function (){
+    return  `Modeil Brand is ${this.brand} and model is ${this.model}`;
+  },
+
+  battray:{
+    mah: 5000 +'ms',
+  },
+};
+
+console.log(mobileModel.brandModel());
+mobileModel.model='s26 Ultra ',
+
+console.log(mobileModel.model);
+// console.log(mobileModel.hasOwnProperty('camera'));
+// console.log(Object.keys(mobileModel));
+
+
+// console.log(mobileModel['selfie camera MP']);
+
+
+console.log(mobileModel[newSymb]);
+
+const obj1={
+  a:1,
+  b:2,
+  c:3,
+};
+const obj2={
+  p:1,
+  q:2,
+  r:3,
+};
+const obj3={
+  x:1,
+  y:2,
+  z:3,
+};
+// const objFianl = Object.assign({},obj1,obj2,obj3);
+const objFianl ={...obj1,...obj2,...obj3};
+
+console.log(objFianl);
+console.log(mobileModel.battray.mah);
+
+
+
+function Person(first,last){
+ ( this.firstName = first);
+ ( this.lastName = last);
+
+}
+const Person1 = new Person( 'Apple','Mahmud');
+Person1.age = 22;
+const Person2 = new Person('Babul', 'Ahamed');
+Person2.age = 29;
+console.log(Person1);
+console.log(Person2);
