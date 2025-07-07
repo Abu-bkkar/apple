@@ -1,1 +1,409 @@
 
+// const students = [ 'Rayhan', 'Alvi', 'Arjum', 'Ayman','Arman','Alip'];
+
+
+
+
+// for (let i = 0; i < students.length; i++){console.log(students[i], students [i].toLowerCase());}
+
+// const students1 = ['Abu','rayhan', 'apple@gmail.com',25,true];
+
+
+
+// const students1 = {
+//     firstName: 'Abu',
+//     secondName:'Rayhan',
+//     email: 'applelove@gmail.com',
+//     age: 25,
+//     attend: true,
+// }
+
+// const students2 = {
+//     firstName: 'apple',
+//     secondName:'sorkar',
+//     email: 'sorkar@gmail.com',
+//     age: 25,
+//     attend: true,
+// }
+
+
+// const students3 = {
+//     firstName: 'Reduyan',
+//     secondName:'mia',
+//     email: 'reduyan@gmail.com',
+//     age: 25,
+//     attend: true,
+// }
+
+// const allstudents =[ students1,students2,students3,];
+
+// for(let i = 0; i <allstudents.length; i++){
+
+
+//     sendEmail(allstudents[i].email)
+
+
+// }
+
+// function sendEmail(email){
+//     console.log('sending email to', email)
+// }
+
+
+
+
+
+
+
+// function nameofthefunction(name) {
+
+//     if(!name){
+//         console.log("please provide your name");
+
+//     }
+//     else {
+//          console.log("Hello",name);
+//     }
+
+   
+// }
+
+// nameofthefunction('Apple');
+// nameofthefunction('Rayhan');
+// nameofthefunction();
+// nameofthefunction('bokul');
+ 
+
+
+
+
+// function generateRandomNumber(min=1,max) {
+//     const rendomNumber= Math.floor(Math.random() * min + max);
+//     return rendomNumber;
+// }
+// console.log(
+//     generateRandomNumber(4,7)
+// );
+
+// // async (params) => {
+//     class 5
+// }
+
+// const numbers = [2,5,6,20,30,87,65,100,];
+
+// // let sum = 0
+
+// // for ( let i = 0; i < numbers.length; i++){
+
+// //    sum += numbers[i]
+// // }
+// //  console.log( sum);
+
+
+// // const cb = () =>{
+// //     console.log('apple')
+// // };
+
+// // numbers.forEach(cb)
+
+
+
+
+
+
+
+
+// // numbers.forEach(function(value){
+// //     if (value % 2 == 0 ){
+// //         console.log(value);
+// //     }
+// // });
+
+
+
+
+
+// let sum = 0;
+// numbers.forEach(function(v,i){
+//     if( i <= 3){
+//     sum+= v ; }
+// });
+
+// console.log(sum);
+
+
+
+// const arr = [ 1,2,4,null,false,4,5,'',6,7];
+// for(let i=0; i <arr.length; i++){
+//     if(typeof arr[i] !== 'number') {
+//         arr [i]= undefined
+//     }
+// }
+
+// console.log(arr);
+
+
+
+// const arr = [ 1, 2, 3, null, false, 4, 5, '', 'test', 6, 7];
+
+// let count = 0
+// for(let i=0; i <arr.length; i++){
+
+// for(let j = i +1; j < arr.length -1; j++){
+
+//     if(!arr[j] || typeof arr [j] !== 'number'){
+
+//         arr[j] =arr[j+1];
+//         arr[ j+1 ] = undefined;
+        
+//     }
+// }
+//     if (arr[i] == undefined){
+//         count++;
+//     }
+// }
+
+// arr.length-=count;
+// console.log( arr );
+
+
+
+// const filteredArray = arr.filter( (v)=> typeof v == "number");
+// console.log(filteredArray);
+
+
+// const arr=[
+//     {id: 1, value: 10},
+//     {id: 2, value: 20},
+//     {id: 3, value: 30},
+//     {id: 4, value: 40},
+//     {id: 5, value: 50},
+// ];
+// const index = arr.findIndex(function(v){
+//     return v.id == 4;
+// });
+// arr[index].value =400;
+// console.log(arr);
+
+
+
+// const obj = arr.find(function(v){
+//     return v.id == 4;
+
+// });
+// obj.value = 400;
+// console.log( obj );
+// console.log( arr );
+// console.log(arr[3]==obj);
+
+
+
+// const a = {a: 10};
+//     b = {a: 10};
+//     const c=b;
+//     console.log(a==c);
+
+
+
+
+//splice==>muable
+
+// const index = arr.findIndex ((item) => item.id === 3);
+// const arr1 =arr.splice(index,1)
+
+
+// console.log(arr1);
+
+
+// filter --> immutable
+
+// // async (params) => {
+//     const arr2= arr.filter((item) => item.id == 4);
+    
+    
+//     // console.log(arr2);
+// }
+
+
+
+// // const microphone ={
+// //     brand: 'fifine',
+// //     indicator: true,
+// //     price: 2000,
+// //     color: 'black',
+// }
+
+
+
+
+// const testobj = new Object();
+// testobj.name = 'test object';
+// testobj.itme = new Date();
+// console.log(testobj)
+
+
+// console.log( Object.keys(microphone));
+// console.log( Object.values(microphone));
+
+
+// for ( let k in microphone){
+//     console.log( k , microphone [k]);
+// }
+
+
+// console.log( Object.entries(microphone));
+
+// const array =[
+//   [ 'brand', 'fifine' ],
+//   [ 'indicator', true ],
+//   [ 'price', 2000 ],
+//   [ 'color', 'black' ]
+// ];
+// console.log(Object.fromEntries(array));
+
+// function uuidv4(){
+//     return 'xxxxxxxxxxxx-xxxx-yxxx-xxxxxxxxx'.replace(/[xy]/g, (c) =>{
+//         const r = (Math.random()* 16 ) | 0;
+//         const v =c =='x'? r : (r &0*3) | 0*8; 
+//         return v.toString(16);
+//     });
+// }
+
+// const students =[
+//     {
+//         id: "3c99f0a2a10b-de31-0f3e-d00bafca9",
+//         name:'md Al-amin',
+//         email: 'mdal-amin@gmail.com',
+
+//     },
+//         {
+//         id: "410c9169a8bf-1767-0cb6-cede26b1a",
+//         name:'md akaid',
+//         email: 'mdakaid@gmail.com',
+        
+//     },
+//         {
+//         id: "6e79eed9c5d6-3b3a-0f6f-4752e1665",
+//         name:'md apple',
+//         email: 'mdapple@gmail.com',
+        
+//     }
+// ];
+
+
+//  creat anew students
+
+
+/**
+ * 1.\easily Traverse (oder(n))
+ * 2.Filter
+ * 3Delete (medium) [splice --> o (n), filter --> o (n)]
+ * 4updeata (medium)  [push O (n)]
+ * 5Create a new one (easy) -> o (1) , unshift  --> o (n)]
+ */
+
+// students.push(
+//     {
+//           id: uuidv4(),
+//         name:'md abu-bkker',
+//         email: 'mdabu-bkker@gmail.com',
+//     }
+// );
+
+
+
+//update
+
+// const idtoUpdate =  '410c9169a8bf-1767-0cb6-cede26b1a'
+// const updatedate = {
+//     name : 'Babu Ahamed',
+
+//     // email: 'Babu@gmail.com',
+// }
+//*const updatedIndex = students.find((item)=> item.id ==idtoUpdate);
+// updateobj.name = updatedate.name;
+// updateobj.email =updatedate.email;
+
+// students[updatedIndex]={
+//     ...students[updatedIndex],
+//     ...updatedate,
+
+// }
+
+
+//* console.log('updated',students);
+
+
+//delete
+
+// students.splice(updatedIndex,1);
+// console.log('delete', students);
+
+// for (let i in students){
+//     console.log( students[i].name);
+// }
+
+// for(let student of students){
+//     console.log(student.name);
+// }
+
+
+
+function uuidv4(){
+    return 'xxxxxxxxxxxx-xxxx-yxxx-xxxxxxxxx'.replace(/[xy]/g, (c) =>{
+        const r = (Math.random()* 16 ) | 0;
+        const v =c =='x'? r : (r &0*3) | 0*8; 
+        return v.toString(16);
+    });
+}
+
+const students ={
+    "3c99f0a2a10b-de31-0f3e-d00bafca9": {
+        id: "3c99f0a2a10b-de31-0f3e-d00bafca9",
+        name:'md Al-amin',
+        email: 'mdal-amin@gmail.com',
+
+    },
+        "410c9169a8bf-1767-0cb6-cede26b1a" : {
+        id: "410c9169a8bf-1767-0cb6-cede26b1a",
+        name:'md akaid',
+        email: 'mdakaid@gmail.com',
+        
+    },
+       "6e79eed9c5d6-3b3a-0f6f-4752e1665":  {
+        id: "6e79eed9c5d6-3b3a-0f6f-4752e1665",
+        name:'md apple',
+        email: 'mdapple@gmail.com',
+        
+    }
+};
+
+
+students[std.id]=std;
+
+
+   const idToBeUpdeted ="3c99f0a2a10b-de31-0f3e-d00bafca9";
+   const updatedData ={
+    name: 'Feroz khan',
+    email:'feroz@gmail.com',
+};
+students[std.id] =std;
+
+
+students[idToBeUpdeted] ={
+    ...students[idToBeUpdeted],
+    ...updatedData,
+};
+delete students[idToBeUpdeted];
+
+console.log(students ["6e79eed9c5d6-3b3a-0f6f-4752e1665"]);
+
+
+/**
+ * 1.\easily Traverse (oder(n))
+ * 2.Filter
+ * 3Delete (medium) [splice --> o (n), filter --> o (n)]
+ * 4updeata (medium)  [push O (n)]
+ * 5Create a new one (easy) -> o (1) , unshift  --> o (n)]
+ */
+
