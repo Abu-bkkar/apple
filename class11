@@ -1,0 +1,62 @@
+
+//javaScript Arrays
+
+
+const language = ['HTML','CSS','JavaScript','PHP', true, 50]
+
+language[4]='Tailwind CSS';
+language[5]='react.js';
+
+language[6]= 'vue.js';
+language[7]= 'laravel';
+
+//Delete or remove last Item
+
+language.pop();
+
+// Add last item..
+
+language.push('Angular.js');
+
+
+//ADD first Item
+
+language.unshift('Basic.js');
+
+//delete first item
+language.shift();
+
+
+
+console.log(language);
+
+console.log (language.at(5));
+
+
+console.log(language.join(' / '));
+console.log(language.length);
+
+console.log(language[language.length-1]);
+
+const Person = [];
+Person['firstName'] ='Apple';
+Person['firstName'] ='Ahamed';
+Person[2]=35;
+
+
+console.log(Person.length);
+console.log(Person);
+console.log(Person[2]);
+
+
+
+const x =[1,2,3,4];
+const y =[1,2,3,4];
+const z =x.concat(y);
+
+console.log(z);
+
+const a = [[1,2,3,4,[4.3,2,1]],
+            [1,2,3,4,],
+             [1,2,3,4,],];
+    console.log(a.flat())
