@@ -1,0 +1,68 @@
+//..HTML..>>..........................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <img id="ludo" src="6.png" alt="ludo">
+   <br>
+   <button id="btn" onclick="rollDice()">Roll dice</button>
+
+<script src="./new.js"></script>
+</body>
+</html>
+
+
+//..CSS..>>........................................
+body{
+    text-align: center;
+}
+button{
+    padding: 14px 6%;
+    color: rgb(255, 255, 255);
+    background: red;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+//...JAVASCRIPT..>>>...............
+
+///javascript Math
+let mun = 30.0000000001;
+let mun2 = 2;
+// !*console.log(Math.round(mun))
+// !console.log(Math.ceil(mun))
+// *console.log(Math.floor(mun))
+// console.log(Math.pow(4,3));
+
+//squre Value
+
+// console.log(Math.pow(4,3))
+
+// root value
+// console.log(Math.PI);
+// console.log(Math.random().toFixed(2) * 10);
+
+// let uppeValue = 6;
+// let lowerValue = 1;
+// let resultValue = Math.ceil(Math.random()* uppeValue + 1);
+
+// console.log(resultValue);
+
+function rollDice(){
+    let rendomNumber = Math.floor(Math.random() * 6
+
+) +1;
+let imageSource = rendomNumber +'.png';
+document.getElementById('ludo').src = imageSource;
+}
+
+
+
+
