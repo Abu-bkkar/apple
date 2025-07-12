@@ -1,0 +1,52 @@
+// Javascript Number
+
+// const x= 9999999999999999;
+// const y = 11;
+// const z = 9;
+
+// console.log(y/z)
+
+// const x= 9999999999999999;
+// const y = 0.6;
+// const z = 0.7;
+// const j = (y*10+z*10)/10;
+const x= 9999999999999999;
+const y = 0.6;
+const z = 0.7;
+const j = (y+z).toFixed(2);
+
+// console.log(new Number(j))
+
+const a =10;
+const b=20;
+const c=248;
+const d="Apple";
+
+
+// console.log (a+b+j)
+// console.log(c-j)
+// console.log(c*j)
+// console.log(c/j)
+
+// console.log(c-d)
+
+// let num = 3;
+// let value = "";
+// while( num !=Infinity){
+//     num = num*num;
+//     value = value + num +`\n <br>`;
+// }
+
+// console.log(value)
+// document.getElementById(`loki`).innerHTML = value;
+
+// console.log(c.toString(16))
+
+const g = 300;
+const r = 3222222200;
+const h = new Number(300)
+
+// console.log( g==h);
+// console.log( g===h);
+console.log(r.toPrecision(3))
+console.log(r.toFixed(2))
