@@ -1,0 +1,16 @@
+const mobel = 'Apple';
+const fristname="lorem";
+
+const sen ='I\'m form \n Bangladesh'
+
+
+const sen2 =`I'm ${mobel} I'm form Bangladesh`
+
+// console.log(mobel,fristname,sen2)
+const student ='Abu-bkker Siddikur Rohoman'
+console.log(student.slice(-4))
+console.log(student.substring(-4))
+
+
+const url= `https://ali.com/new%20Bloh`
+console.log(url.replace(`%20`, `-`))
