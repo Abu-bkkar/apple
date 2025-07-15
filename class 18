@@ -1,0 +1,29 @@
+// JavaScript conditonal
+
+let age =41;
+// if(age>40){
+//     console.log(
+//         `You are old`
+//     )
+// }else if (age > 18){
+    
+//     console.log(`You are ready to open a Google account`);
+// }
+// else{
+//      console.log(`You are not read`)
+// }
+
+let category = 'Motor Bike'
+let carType;
+switch(category){
+    case `car`:
+        carType= 'This a Car';
+        break;
+        case `Motor Bike`:
+            carType = `This is a Motor Bike`;
+            break;
+            default:
+                carType =`Unknown vahicle Cate gory`;
+
+};
+console.log(carType)
