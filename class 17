@@ -1,0 +1,31 @@
+/* ?JavaScript...Memory Management...
+
+
+?Call stack
+! primitive Data Type
+*String ,Number , Boolean, Null, synb,Biglnt
+
+*/let fullName = `Apple Hossain`;
+
+let weDeveloper = `Shovo`;
+// console.log(fullName);
+// console.log(weDeveloper);
+
+
+let student ={
+    name : `Apple`,
+    age : 20,
+};
+let pepole = student;
+// pepole = {
+//     name:`Ab-ubkker`,
+//     age : 30,
+// };
+
+pepole.name ='rayhan'
+console.log(
+    student
+)
+console.log(
+    pepole
+)
