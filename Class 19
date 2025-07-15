@@ -1,0 +1,44 @@
+// Javascript loop
+
+
+let car = ['bmw','volvo','toyota','ford','tesla','lemburdini'];
+
+// car.push('ball');
+// for(let i = 0; i < car.length; i++){
+//  console.log(car[i])
+// };
+
+//for In lopp
+
+// let person = {
+//     name: 'apple',
+//     age: 20,
+//     conutry: 'Bangladesh',
+// };
+// for (let i in person){
+//     let cpaLatter = i.charAt(0).toUpperCase() + i.slice(1)
+//     console.log(
+//         cpaLatter+ ' : '+ cpaLatter[i]
+//     );
+// };
+
+//forEach method
+
+// car.forEach(function (i){
+
+//     console.log(i)
+// })
+
+
+for( let i of car){
+ console.log(i)
+};
+
+
+// while loop
+let num = 0;
+
+while (num < 10 +1){
+    console.log(num);
+    num++;
+}
