@@ -1,0 +1,52 @@
+// ?Javascript Class This
+'use strict'
+
+// console.log(this)
+
+var firstName = "Apple";
+
+
+// function myFunction(){
+//     return this;
+// };
+
+
+// console.log(myFunction())
+
+
+const mFunc = ()=>{
+    // console.log(this)
+};
+
+mFunc();
+
+const mybtn = document.querySelector(`button`);
+mybtn.addEventListener('click',function(){
+    // console.log(this);
+});
+
+const student = {
+    fName:'Abu-bkker',
+    sInfo: function(){
+        return`${this.fName} love to read`
+    }
+};
+console.log(student.sInfo())
+
+
+const game ={
+    gName : 'NFS',
+    gInfo: function (){
+        console.log(
+            `love to play ${this.gName}`
+        )
+    }
+};
+
+const aGame = {
+    gName:'car Game',
+
+};
+const bindGame = game.gInfo.bind(aGame)
+console.log(game.gInfo());
+console.log(bindGame())
