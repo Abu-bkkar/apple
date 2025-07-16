@@ -1,0 +1,22 @@
+///javascript..21
+
+
+let car = 'Bantley';
+
+console.log(
+    car
+);
+
+if(true){
+    console.log(car)
+    let bike = 'r15';
+    console.log(bike);
+}
+// console.log(bike);
+
+function name(){
+    let cyclae= "duronto";
+    console.log(cyclae);
+}
+name()
+
