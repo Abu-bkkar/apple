@@ -1,0 +1,131 @@
+//Html..>......>>>>>..................................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 class="popci" id="lok"></h2>
+    <h2 class="popci" id="loke"></h2>
+    <h2 class="popci" id="loka"></h2>
+    <h1 class="popci" id="loki"></h1>
+    <h2 class="popci" id="lokay"></h2>
+
+   <img id="ludo" src="" alt="ludo">
+   <br>
+   <button id="btn" onclick="rollDice()">Roll dice</button>
+
+<script src="./new.js"></script>
+</body>
+</html>
+
+
+
+///.....javaScript..>>>>>>>>>>>>.........................................
+
+
+
+// // mmd
+
+// function guessTheNumber(diffculty){
+//     let rendomNumber;
+//     let attamps=0;
+//     let maxAttamps;
+//     let renge;
+//     switch(diffculty){
+//         case 'easy':
+//             renge =10;
+//             maxAttamps=5;
+//             rendomNumber=Math.floor(Math.random() *10 + 1);
+//             console.log(rendomNumber);
+//             break;
+
+
+//         case 'medium':
+//             renge =100;
+//             maxAttamps=8;
+//             rendomNumber=Math.floor(Math.random() *100 + 1);
+//             console.log(rendomNumber);
+//             break;
+
+
+//         case 'hard':
+//             renge =1000;
+//             maxAttamps=10;
+//             rendomNumber=Math.floor(Math.random() *1000 + 1);
+//             console.log(rendomNumber);
+//             break;
+//             default:
+//               let roll =
+//                `Invalid difficuly level.choose
+//                 'easy','medium','hard'
+//               <br>pless try agen😪😪
+//               `;
+   
+                
+//               document.getElementById('loki').innerHTML= roll;
+   
+//             }    
+            
+//             while (attamps < maxAttamps){
+//                 let guess = parseInt(prompt(
+//                     `Guess a number between 1 and ${renge}(Inclusive).you have
+//                     ${maxAttamps - attamps} attemps left`));
+//                     attamps++;
+ 
+//                     if(guess===rendomNumber){
+                    
+//                         document.getElementById('lok')
+//                         .innerHTML= `Congratulations! you gussed the number ni attemps 🎈🎈`,attamps;
+//                         break;
+   
+//                     }
+                   
+//                     else if(guess < rendomNumber){
+//                         document.getElementById('loke')
+//                         .innerHTML= 'Too low.try again 😥';
+//                     }else{
+//                         document.getElementById('loka')
+//                         .innerHTML= 'Too High.try again 😥';
+//                     }
+//                     if(maxAttamps===attamps){
+//                         document.getElementById('lokay')
+//                         .innerHTML= `Sorry ,You ran of attemps.The Numbers Was ${rendomNumber} 😥`;
+//                         console.log(rendomNumber)
+//                     }
+//             } 
+// }
+
+// ///Get user input deficulty
+
+// let diffculty = prompt
+// (`Choose difficulty (Easy,Medium, Hard)`).toLowerCase();
+// guessTheNumber(diffculty)
+
+
+
+/////..CSS......>>>>>>>>>>>>>>>>>>..........................................
+
+
+body{
+    text-align: center;
+}
+button{
+    padding: 14px 6%;
+    color: rgb(255, 255, 255);
+    background: red;
+    border: none;
+    margin-top: 20px;
+    border-radius: 10px;
+};
+
+
+
+
+
+
+
