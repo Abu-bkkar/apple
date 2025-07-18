@@ -1,0 +1,63 @@
+// **Name : menosqr()
+/*
+This function creates a clouuser to impleament
+memorizations (caching results)
+*It initlizes an empty objects cache tostore store previously calculated square.
+*It returns an inner function optimizedsrq()
+
+*/ 
+//  function square(u){
+//     return u*u;
+// };
+
+// function menosqr(){
+//     let cache = {};
+
+//     return function optimizedsrq(i){
+//         if(i in cache){
+//             return cache[u];
+//         }else{
+//             const result =square (i);
+//            cache[i]= result;
+//            return result;
+//         }
+//     };
+// }
+
+// const memosuqare = menosqr();
+
+// console.log(memosuqare(5))
+
+
+
+function square(num){
+    return num*num;
+};
+
+function memSqr(){
+    let cache ={}
+
+    console.log(cache)
+    return function optimizedsrq (i)
+    {
+        
+        if(i in cache){
+            // console.log("Retunruning form cache")
+            return cache[i]
+
+        }else{
+            //     const result = square(num);
+            //    cache[num] = result
+            //    return result
+            console.log('Computing from Cache')
+            return (cache[i] = square(i));
+        }
+    };
+}
+
+const memosuqare =  memSqr();
+
+console.log(memosuqare(5));
+console.log(memosuqare(6));
+console.log(memosuqare(63));
+console.log(memosuqare(64));
