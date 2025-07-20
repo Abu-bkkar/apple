@@ -1,0 +1,84 @@
+// JavaScript map
+// JavaScript Higher order Array Loop
+
+const fruits =['Mango','Banana','Orange','graps'];
+
+
+const country = new Map([
+    ['Bn', 'Bangladesh'],
+    ['In', 'India'],
+    ['Pk', 'Pakistan'],
+    ['Np', 'Nepal'],
+]);
+
+
+const mycountry ={
+Bn:'Bangladesh',
+In :'India',
+Pk :'Pakistan',
+Np: 'Nepal',
+};
+
+const stack =[
+   { name: `MEAN Stack`,
+    property:`Javascript, Vue, Laravel, MySQL`,
+    foundation:'PHP',
+    tranding: true,
+    Price:5000,
+  },
+   { name: `Laravel`,
+    property:`Mongo, Vue, Laravel, MySQL`,
+    foundation:'Javascript',
+    tranding: true,
+    Price:4000,
+  },
+   { name: `woedPress`,
+    property:`Javascript, Vue, Laravel, MySQL`,
+    foundation:'PHP',
+    tranding: true,
+    Price:3500,
+  },
+   { name: `CSS`,
+    property:`Javascript, Vue, Laravel, MySQL`,
+    foundation:'PHP',
+    tranding: true,
+    Price:3500,
+  },
+];
+
+const fruitem = fruits.filter(fruit => fruit.
+    toLocaleLowerCase().startsWith('b'))
+
+const fruitLen3 =fruits.filter(fruit => fruit.length === 5)
+
+const fruitStarO = fruits.filter(fruit => fruit.
+    toLocaleLowerCase().includes("o")
+)
+
+// console.log(fruitStarO);
+
+const nuumbers = [1,2,3,4,5,6,7];
+
+const big5 = nuumbers.filter( num=> num < 5);
+// console.log(big5);
+
+let useStack = stack.filter(sk=>sk.foundation ==="PHP");
+// console.log(useStack);
+const myNumb =nuumbers
+.map(num => num + 5)
+.map(num=>num * 5)
+.filter(num=>num >=50)
+
+// console.log(myNumb);
+
+const myTotal = nuumbers.reduce((acc, cur) =>{
+  //  console.log(`Accumulator ${acc} and Current Value ${cur}`)
+ return acc+cur},0)
+
+// console.log(myTotal)
+
+
+const coursePrice = stack.
+reduce((acc,cur)=>acc+cur.Price,10);
+
+console.log(coursePrice)
