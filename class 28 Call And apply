@@ -1,0 +1,56 @@
+// JavaScript Call And apply
+// JavaScript
+
+
+const greenLine={
+  bus:`Green Line Paribahan`,
+  bCode:`GL`,
+  ticket:[],
+book(setNumber,name){
+  console.log(
+    `${name} booked a seat on ${this.bus} ticket
+     ${this.bCode}-${setNumber}`
+  );
+this.ticket.push({ticketInfo:`${this.bCode}-${setNumber}`,name})
+}
+}
+greenLine.book(`C1`,`Apple Sorokar`);
+greenLine.book(`C2`,`Abu-bkkar Siddikur Horoman`);
+greenLine.book(`C3`,`Abu-bkkar Siddikur Horoman`);
+console.log(greenLine);
+
+const shohagh ={
+  bus:`shohagh Paribahan`,
+  bCode:`SH`,
+  ticket:[],
+
+};
+
+const book = greenLine.book;
+
+book.call(shohagh,`B1`, `korim hossan`)
+
+
+console.log(shohagh.ticket)
+
+const hanif ={
+  bus:`hanif Paribahan`,
+  bCode:`HF`,
+  ticket:[],
+  
+};
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`)
+book.call(hanif,`B2`, `Rorim hossan`);
+console.log(hanif.ticket)
+
+//Apply  
+
+book.apply(greenLine,[`A1`,`Durjoy Hossin`])
