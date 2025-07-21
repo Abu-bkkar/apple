@@ -1,0 +1,95 @@
+// JavaScript Call And apply
+// JavaScript
+
+
+const greenLine={
+  bus:`Green Line Paribahan`,
+  bCode:`GL`,
+  ticket:[],
+book(setNumber,name){
+  // console.log(
+  //   `${name} booked a seat on ${this.bus} ticket
+  //    ${this.bCode}-${setNumber}`
+  // );
+this.ticket.push({ticketInfo:`${this.bCode}-${setNumber}`,name})
+}
+}
+greenLine.book(`C1`,`Apple Sorokar`);
+greenLine.book(`C2`,`Abu-bkkar Siddikur Horoman`);
+greenLine.book(`C3`,`Abu-bkkar Siddikur Horoman`);
+// console.log(greenLine);
+
+const shohagh ={
+  bus:`shohagh Paribahan`,
+  bCode:`SH`,
+  ticket:[],
+
+};
+
+const book = greenLine.book;
+
+book.call(shohagh,`B1`, `korim hossan`)
+
+
+// console.log(shohagh.ticket)
+
+const hanif ={
+  bus:`hanif Paribahan`,
+  bCode:`HF`,
+  ticket:[],
+  
+};
+book.call(hanif,`B2`, `Rorim hossan`)
+
+// console.log(hanif.ticket)
+
+//Apply  
+
+book.apply(greenLine,[`A1`,`Durjoy Hossin`])
+
+const ticketSH = book.bind(shohagh,`T1`);
+
+
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// ticketSH(`Ali Hossain`)
+// console.log(ticketSH())
+
+const person = {
+  fName : `Abu-bkker`,
+  lName : `Siddik`,
+  display:function(){
+    return(this.fName + " " + this.lName)
+  }
+};
+// const display = person.display;
+// console.log(setTimeout(display.bind(person),2000))
+
+greenLine.busses= 20;
+greenLine.baybas=function(){
+  console.log(this);
+  this.busses++
+  console.log(this.busses);
+}
+greenLine.baybas
+
+// document.querySelector(`.btn`)
+// .addEventListener(`click`, greenLine.baybas)
+document.querySelector(`.btn`)
+.addEventListener(`click`, greenLine.baybas.bind(greenLine));
+
+
+
+const addTEX = (rate,value) => value + (
+  value * rate
+)/100;
+
+console.log(addTEX(10,100));
+
+const addVAT = addTEX.bind(null,15);
+console.log(addVAT(100))
