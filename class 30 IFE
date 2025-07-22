@@ -1,0 +1,54 @@
+//* (JavaScript) 
+// ?Innediately Invoked Function Expression
+
+const aFunction =function(a,b){
+    console.log(`A simple Function ${a+b}`)
+};
+
+aFunction(3,4)
+aFunction(7,5);
+
+(function(a,b){
+    console.log(a+b)
+})(4,4);
+
+((a,b)=>console.log(a*b))(3,5);
+((a,b)=>console.log(a*b))(4,5);
+
+// DOM
+
+// const h3 =document.querySelector(`.h3`);
+// const h2 =document.querySelector(`.h2`);
+// h3.style.backgroundColor=`red`
+// // h2.style.backgroundColor=`yellow`
+
+(()=>{
+const h3 =document.querySelector(`.h3`);
+const h2 =document.querySelector(`.h2`);
+h3.style.backgroundColor=`red`;
+h2.style.backgroundColor=`yellow`})();
+
+// const mycallo =(()=>{
+//    return {let privateVar =`The is a private Variable`}
+
+// })();
+
+const myModule =(()=>{
+    let privateVar = `The is a Privte Functon 🧨`;
+    function privateFunc(){
+        console.log(`${privateVar}The is a Private function `);
+    }
+    return {
+        
+        publicVar:`The is a public variabale`,
+      pubMehod: function(){
+
+       privateFunc()
+        return`The is a public methoh`;
+       }
+    }
+    
+})();
+// console.log(mycallo.privateVar);
+console.log(myModule.publicVar);
+console.log(myModule.pubMehod());
