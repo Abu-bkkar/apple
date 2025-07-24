@@ -1,0 +1,31 @@
+// JavaSxript DOM document object model
+
+document.querySelector(`.hh2`).innerText = `Abu-bkkar;`;
+
+const box = document.querySelector(`.box`);
+box.style.backgroundColor=`red`;
+box.style.width = `100px`;
+box.style.height =`100px`;
+
+const menuItem = document.querySelectorAll(`a`);
+
+// menuItem[2].style.color =`red`
+menuItem.forEach(function(i){
+    i.style.color =`red`;
+    i.style.fontSize =`20px`
+});
+const numClass = document.getElementsByClassName(`nev-link`);
+
+const convredClass = Array.from(numClass);
+// for(let i =0 ;i < numClass.length; i++){
+//     console.log([i])
+// }
+
+convredClass.forEach( i => {
+i.style.backgroundColor=`#262666`;
+i.style.color=`#fff`;
+i.style.fontSize = `50px`
+
+});
+
+document.querySelector(`.ctay`).setAttribute(`class`,`whire`);
