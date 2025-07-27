@@ -1,0 +1,170 @@
+;; //html.................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-PROJECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+  <nav id="menu">
+    <ul>
+      <li class="red"></li>
+      <li class="green"></li>
+      <li class="blue"></li>
+      <li class="pink"></li>
+      <li class="purple"></li>
+    </ul>
+  </nav>
+
+
+
+<script src="./new.js"></script>
+</body>
+</html>
+
+;; //css.........>>>>>>>>>>>>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: #111;
+}
+#menu ul{
+    text-align: center;
+    margin-top: 50px;
+    
+}
+#menu li{
+    display: inline-block;
+    border: 2px solid #ddd;
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ddd;
+    cursor: pointer;
+}
+
+#menu li.red{
+    background: #e74c3c;
+}
+#menu li.green{
+    background: #16a085;
+}
+#menu li.blue{
+    background: #2ecc71;
+}
+#menu li.pink{
+    background: #e84393;
+}
+#menu li.purple{
+    background: #ff81be;
+}
+
+
+;; javascript.....................................................................................>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// JavaSxript DOM document object model
+
+const body = document.getElementById(`body`);
+const button = document.querySelectorAll(`li`);
+
+
+// const redColor = document.querySelector(`.red`);
+// redColor.addEventListener(`click`,function(){
+//     body.style.backgroundColor= `#e74c3c`
+// })
+
+// button.forEach(function(value){
+//     value.addEventListener(`click`,function(){
+//         let className = this.classList[0];
+//         let color = ``;
+
+//         if(className===`red`){  
+//             color = `#e74c3c`;
+//         }
+//         if(className===`green`){  
+//             color = `#16a085`;
+//         }
+//         if(className===`blue`){  
+//             color = `#2ecc71`;
+//         }
+//         if(className===`purple`){  
+//             color = `#ff81be`;
+//         }
+//         if(className===`pink`){  
+//             color = `#e84393`;
+//         }
+
+//         body.style.backgroundColor=color;
+        
+//     })
+// });
+
+//         // console.log(className);
+//         // console.log(color)
+// button.forEach(function(orginl){
+//     orginl.addEventListener(`click`,function(){
+//         let allName = this.classList[0];
+//         colore = ``;
+
+//         if(allName === `red`){
+//             colore = `#e74c3c`;
+//         }
+//         if(allName === `green`){
+//             colore = `#16a085`;
+//         }
+//         if(allName === `blue`){
+//             colore = `#2ecc71`;
+//         }
+//         if(allName === `pink`){
+//             colore = `#e84393`;
+//         }
+//         if(allName === `purple`){
+//             colore = `#ff81be`;
+//         }
+//         console.log(colore)
+//         body.style.backgroundColor=colore;
+//     })
+// });
+button.forEach((rolle)=>{
+    rolle.addEventListener(`click`,function(){
+        let sovName=this.classList[0]
+        colorAll = ``;
+            if(sovName === `red`){
+            colorAll = `#e74c3c`;
+        }
+         if(sovName === `green`){
+            colorAll = `#16a085`;
+        }
+        if(sovName === `blue`){
+            colorAll = `#2ecc71`;
+        }
+        if(sovName === `pink`){
+            colorAll = `#e84393`;
+        }
+        if(sovName === `purple`){
+            colorAll= `#ff81be`;
+        }
+        
+
+        console.log(sovName)
+        console.log(colorAll)
+        body.style.backgroundColor=colorAll;
+    })
+});
+
+
+
+
+
