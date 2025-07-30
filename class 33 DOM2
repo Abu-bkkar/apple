@@ -1,0 +1,186 @@
+///HTML.................................................................
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-PROJECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+<div id="main">
+  <h1>BMI Calculator</h1>
+  <form action="" id="form">
+
+    <label for="height">Height</label>
+    <input id="height" type="number" placeholder="In CM">
+    <label for="weight">Weight</label>
+    <input id="weight" type="number" placeholder="In KG">
+
+    <button id="button">Calculator</button>
+  </form>
+  <div class="result">
+    <h4>You BMI Score</h4>
+    <h2 id="Score">50.22</h2>
+  </div>
+
+  <div class="info">
+    <h4>BMI Weight Guide</h4>
+    <p>Under Weight = Less than 18.6</p>
+    <p>Normal Range = 18.6 and 24.9</p>
+    <p>DverWeight = Grestr than 24.9</p>
+  </div>
+</div>
+
+
+<script src="./new.js"></script>
+</body>
+</html>
+
+//CSS........................................................................
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}; */
+/* *
+*::after,*::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}; */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ background: #ffe5ec;
+ font-weight: 300;
+   
+}
+::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+#main{
+ background-image: linear-gradient(#ff0248, #ff6d31);
+width: 50%;
+padding: 35px 25px 25px;
+margin: 25px auto 0;
+border-radius: 20px;
+box-shadow: 0 0 10px red;
+}
+#main h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#main h2 {
+    color: #262626;
+    background: #ddd;
+    font-weight: 900;
+    font-size: 50px;
+    display:inline-block;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 0px;
+}
+#main label {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+
+}
+#main input{
+    border: 0px;
+    border-radius: 5px;
+     background-image: linear-gradient(#ff0248, #ff6d31);
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    color: #fff;
+}
+#main input:focus{
+outline: auto;
+}
+#main button{
+    font-size: 25px;
+    border: 0;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+     margin-top: 10px;
+
+}
+#main button:hover{
+ color: #fff;
+ background: #ff0248;
+
+}
+.result,.info{
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+    
+    
+}
+.result{
+    /* display: none; */
+   
+}
+///JAVASCRIPT....../....................................................................
+
+
+// JavaSxript DOM document object model
+
+let height = document.getElementById(`height`);
+let weight = document.getElementById(`weight`);
+let button = document.getElementById(`button`);
+
+let Score = document.getElementById(`Score`);
+let result = document.querySelector(`.result`);
+
+button.addEventListener(`click`,function(){
+    let oldHeight= parseFloat(height.value);
+    let oldWeight= parseFloat(weight.value);
+//  console.log( oldHeight + oldWeight);
+//     console.log(typeof oldHeight)
+
+oldHeight = oldHeight / 100;
+
+let sqrvalue = oldHeight * oldHeight;
+
+let bmi = oldWeight / sqrvalue;
+Score.textContent = bmi.toFixed(2);
+
+result.style.display = `block`;
+
+if(Score.textContent < 18.6){
+ Score.style.background = `red`;
+}else if(Score.textContent < 24.9){
+    Score.style.background = `green`;
+}else{
+    Score.style.background = `#f1c40f`;
+}
+
+});
+
+let form = document.getElementById(`form`);
+form.addEventListener(`submit`,(t)=>{
+    t.preventDefault()
+})
+
