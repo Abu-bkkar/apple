@@ -1,0 +1,126 @@
+//HTML...............................................
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-PROJECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+<div id="mein1">
+  <p id="mein2">Lodeng....</p>
+  <p id="mein4">Lodeng....</p>
+  <p id="mein5">Lodeng....</p>
+  <h4 id="mein3">Lodeng....</h4>
+  <button id="button">Cr Quote</button>
+</div>
+
+
+
+<script src="./newapiq.js"></script>
+</body>
+</html>
+
+
+
+
+//jAVASRIPT..................................................
+
+const quoteElement = document.querySelector(`#mein2`);
+const authorElement = document.querySelector(`#mein3`);
+const buttonElement = document.querySelector(`button`);
+
+
+const apiQuote = `https://api.api-ninjas.com/v1/quote
+`;
+const quote= `/5ax2ZGNWC06v8Qj3XKOaA==edSerMBNYGuov4tj
+`;
+
+const getQuote =()=>{
+    fetch(apiQuote,
+        { headers: { 
+        'X-Api-Key': quote,},}).then(data =>data.json()).then(follist=>{
+            // console.log(follist[0])
+    quoteElement.textContent=follist[0].quote;
+    authorElement.textContent=follist[0].author;
+    buttonElement.addEventListener(`click`,getQuote);
+}
+).catch(prror=>{
+    console.error(`Error Fatching Quotes`,prror)
+})
+};
+getQuote()
+
+//CSS...................................................................
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+height: 100%;
+}
+body{
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#mein1{
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.4px);
+-webkit-backdrop-filter: blur(3.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+width: 85%;
+padding: 25px 15px;
+border-radius: 20px;
+text-align: center;
+/* height: 200px; */
+
+
+}
+#mein1 p{
+    font-size: 25px;
+    color: #181818;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#mein1 h4{
+    display: inline-block;
+    font-size: 20px;
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 9px 13px;
+    border-radius: 5px;
+    font-weight: 200;
+
+}
+#mein1 button{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    border: 0;
+    background-color: aquamarine;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mein1 button:hover{
+background: rgb(163, 95, 95);
+color: #fff;
+}
