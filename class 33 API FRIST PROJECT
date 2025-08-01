@@ -1,0 +1,141 @@
+//Html..............................................................frist project
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-PROJECT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+<div id="mein1">
+  <p id="mein2">Lodeng....</p>
+  <p id="mein4">Lodeng....</p>
+  <p id="mein5">Lodeng....</p>
+  <h4 id="mein3">Lodeng....</h4>
+  <button id="button">Cr Quote</button>
+</div>
+
+
+
+<script src="./newOBJ.js"></script>
+</body>
+</html>
+
+
+
+
+//Javascript.............................................................frist project
+
+// javascript API
+
+const randomQuotes=[{Quote:`Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, ab aperiam, recusandae magnam sunt provident eos, illum nesciunt dolores assumenda eius.`,
+author: `ipsum dolor`},
+{Quote:`Temporibus, ullam hic? Labore obcaecati, iste eligendi ea earum tenetur enim accusantium, reprehenderit necessitatibus assumenda, alias eveniet. Iusto, impedit quasi.`,
+author: `Temporibus`},
+{Quote:`Iste cumque, deserunt sapiente ipsum ratione beatae hic perferendis unde fugiat aliquid dignissimos distinctio, id rem?`,
+author: `Iste cumque`},
+{Quote:`Labore fugiat voluptate architecto soluta harum dolorum incidunt saepe amet quis, voluptatibus laudantium facilis, dolore reiciendis natus facere tempora beatae explicabo temporibus recusandae,`,
+author: `architecto`},
+{Quote:`dicta voluptatum porro quae nihil! Nobis dolores deserunt maxime ad aperiam ut iste, assumenda hic fugit dignissimos harum doloribus illo accusamus voluptates eaque incidunt cupiditate debitis tempore consectetur fuga in.`,
+author: `voluptatum`},
+
+{Quote:`Eveniet omnis consequatur temporibus explicabo magni exercitationem ducimus voluptas facere, voluptatum eius quam aliquam magnam voluptatem libero doloremque autem porro.`,
+author: `Reprehenderit`},
+
+{Quote:`Iusto iste ab sint reprehenderit dignissimos illo praesentium corrupti impedit blanditiis ad! Commodi repellendus, facere deserunt error maiores adipisci harum necessitatibus autem suscipit voluptatem ut voluptas tempora eius? Sequi, omnis.`,
+author: `Reprehenderit`},
+
+{Quote: `Reprehenderit voluptates delectus asperiores sed eum autem, placeat exercitationem provident deleniti vel officiis ipsam excepturi aliquam ipsa mollitia sint.`,
+  author: `Reprehenderit`},
+
+{Quote:`Delectus enim voluptatibus dolores, odio quam velit commodi ad aliquid vero maiores cupiditate nihil ratione dicta repellat. Quam asperiores dolorum cum.`,
+  author: `Delectus`
+  },]
+
+const quoteElement = document.querySelector(`#mein2`);
+const authorElement = document.querySelector(`#mein3`);
+const buttonElement = document.querySelector(`button`);
+
+function autoquote(){  
+    const quoteIndex = Math.floor(Math.random() * randomQuotes.length);
+    quoteElement.textContent = randomQuotes[quoteIndex].Quote;
+    authorElement.textContent = randomQuotes[quoteIndex].author;
+    console.log(quoteIndex)}
+    autoquote()
+
+buttonElement.addEventListener(`click`,autoquote);
+
+//css...................................................................
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+height: 100%;
+}
+body{
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#mein1{
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.12);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.4px);
+-webkit-backdrop-filter: blur(3.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+width: 85%;
+padding: 25px 15px;
+border-radius: 20px;
+text-align: center;
+/* height: 200px; */
+
+
+}
+#mein1 p{
+    font-size: 25px;
+    color: #181818;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#mein1 h4{
+    display: inline-block;
+    font-size: 20px;
+    background-color: #1d1d1d;
+    color: #fff;
+    padding: 9px 13px;
+    border-radius: 5px;
+    font-weight: 200;
+
+}
+#mein1 button{
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    cursor: pointer;
+    margin: 10px auto 0;
+    border: 0;
+    background-color: aquamarine;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 400;
+}
+#mein1 button:hover{
+background: rgb(163, 95, 95);
+color: #fff;
+}
+
